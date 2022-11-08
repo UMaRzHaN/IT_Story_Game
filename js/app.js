@@ -119,7 +119,8 @@ input.addEventListener("keydown", (e) => {
       onix.toLocaleLowerCase() == `Alex`.toLocaleLowerCase() ||
       onix.toLocaleLowerCase().includes(`Alish`.toLocaleLowerCase()) ||
       onix.toLocaleLowerCase().includes(`Али`.toLocaleLowerCase()) ||
-      onix.toLocaleLowerCase() == `Clown`.toLocaleLowerCase()
+      onix.toLocaleLowerCase() == `Clown`.toLocaleLowerCase() ||
+      onix == ``
     ) {
       div.innerHTML = ``;
       NewGame = new Game(onix);
