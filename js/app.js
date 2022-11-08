@@ -52,6 +52,7 @@ class Game {
     if (
       name.toLocaleLowerCase() == `Alex`.toLocaleLowerCase() ||
       name.toLocaleLowerCase().includes(`Alish`.toLocaleLowerCase()) ||
+      name.toLocaleLowerCase().includes(`Али`.toLocaleLowerCase()) ||
       name.toLocaleLowerCase() == `Clown`.toLocaleLowerCase()
     ) {
       return alert(`Вы метрвы. Вас отпиздил Босит`);
