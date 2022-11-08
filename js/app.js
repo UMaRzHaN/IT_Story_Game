@@ -56,7 +56,7 @@ class Game {
       name.toLocaleLowerCase() == `Clown`.toLocaleLowerCase()
     ) {
       return alert(`Вы метрвы. Вас отпиздил Босит`);
-    } else if (name == ``) {
+    } else if (name == `` || name % 10 || name % 10 == 0) {
       return alert(`Введите своё имя!!!`);
     } else {
       this.name = name;
@@ -102,7 +102,6 @@ class Game {
       alert(`У вас рождается сын`);
       alert(`Он начинает учить Питон`);
     } else {
-      alert(`Не повезло`);
       alert(`Вас больше никто не видел`);
       return alert(`Игра окончена!`);
     }
@@ -120,9 +119,12 @@ input.addEventListener("keydown", (e) => {
       onix.toLocaleLowerCase().includes(`Alish`.toLocaleLowerCase()) ||
       onix.toLocaleLowerCase().includes(`Али`.toLocaleLowerCase()) ||
       onix.toLocaleLowerCase() == `Clown`.toLocaleLowerCase() ||
-      onix == ``
+      onix == `` ||
+      onix % 10 ||
+      onix % 10 == 0
     ) {
-      div.innerHTML = ``;
+      btn[0].innerHTML = ``;
+      btn[1].innerHTML = ``;
       NewGame = new Game(onix);
     } else {
       NewGame = new Game(onix);
