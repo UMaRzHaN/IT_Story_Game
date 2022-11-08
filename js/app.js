@@ -113,16 +113,27 @@ class Game {
 }
 input.addEventListener("keydown", (e) => {
   if (e.key === `Enter`) {
-    NewGame = new Game(e.target.value);
-    btn[0].innerHTML = `урок ИТ`;
-    btn[0].addEventListener(`click`, () => {
-      NewGame.IT();
-      It4ever(NewGame);
-    });
-    btn[1].innerHTML = `Старая бабка`;
-    btn[1].addEventListener(`click`, () => {
-      NewGame.OldBabka();
-      It4ever();
-    });
+    let onix = e.target.value;
+    if (
+      onix.toLocaleLowerCase() == `Alex`.toLocaleLowerCase() ||
+      onix.toLocaleLowerCase().includes(`Alish`.toLocaleLowerCase()) ||
+      onix.toLocaleLowerCase().includes(`Али`.toLocaleLowerCase()) ||
+      onix.toLocaleLowerCase() == `Clown`.toLocaleLowerCase()
+    ) {
+      div.innerHTML = ``;
+      NewGame = new Game(onix);
+    } else {
+      NewGame = new Game(onix);
+      btn[0].innerHTML = `урок ИТ`;
+      btn[0].addEventListener(`click`, () => {
+        NewGame.IT();
+        It4ever(NewGame);
+      });
+      btn[1].innerHTML = `Старая бабка`;
+      btn[1].addEventListener(`click`, () => {
+        NewGame.OldBabka();
+        It4ever();
+      });
+    }
   }
 });
